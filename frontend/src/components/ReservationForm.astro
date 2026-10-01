@@ -1,0 +1,32 @@
+<form id="reservation-form" class="space-y-5" novalidate>
+  <div class="grid gap-5 sm:grid-cols-2">
+    <label class="space-y-2 text-sm text-cream/75">
+      Nombre del cliente
+      <input name="nombreCliente" required maxlength="255" class="w-full rounded-xl border border-cream/15 bg-plum-950/50 px-4 py-3 text-cream placeholder:text-cream/35" placeholder="Ana Martínez" />
+      <span data-error="nombreCliente" class="text-xs text-coral"></span>
+    </label>
+    <label class="space-y-2 text-sm text-cream/75">
+      Teléfono
+      <input name="numeroCliente" required class="w-full rounded-xl border border-cream/15 bg-plum-950/50 px-4 py-3 text-cream placeholder:text-cream/35" placeholder="555 123 4567" />
+      <span data-error="numeroCliente" class="text-xs text-coral"></span>
+    </label>
+    <label class="space-y-2 text-sm text-cream/75">
+      Número de mesa
+      <input name="numeroMesa" required type="number" min="1" class="w-full rounded-xl border border-cream/15 bg-plum-950/50 px-4 py-3 text-cream" placeholder="1" />
+      <span data-error="numeroMesa" class="text-xs text-coral"></span>
+    </label>
+    <label class="space-y-2 text-sm text-cream/75">
+      Estado
+      <select name="estadoPedido" class="w-full rounded-xl border border-cream/15 bg-plum-950/50 px-4 py-3 text-cream">
+        <option value="Disponible">Disponible</option>
+        <option value="Cancelado">Cancelado</option>
+      </select>
+    </label>
+  </div>
+  <label class="block space-y-2 text-sm text-cream/75">
+    Fecha y hora de reserva <span class="text-cream/40">(opcional)</span>
+    <input name="fechaReserva" type="datetime-local" class="w-full rounded-xl border border-cream/15 bg-plum-950/50 px-4 py-3 text-cream" />
+  </label>
+  <button class="w-full rounded-full bg-coral px-6 py-3 font-semibold text-plum-950 transition hover:bg-cream" type="submit">Guardar reserva</button>
+  <p id="form-message" class="hidden text-sm" role="status"></p>
+</form>

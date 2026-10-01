@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', Arial, sans-serif;
+  --color-plum-950: #241022;
+  --color-plum-900: #39132f;
+  --color-plum-800: #4c1d40;
+  --color-cream: #fff4d6;
+  --color-coral: #f28a4b;
+  --color-olive: #718044;
+  --color-rose: #c995a6;
+}
+
+:root {
+  color-scheme: light;
+  font-family: var(--font-sans);
+  background: #ffffff;
+  color: #182026;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #ffffff;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible {
+  outline: 2px solid #f28a4b;
+  outline-offset: 3px;
+}
+
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
+  opacity: .18;
+  pointer-events: none;
+}
+
+.editorial-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -.045em;
+  line-height: .82;
+}
+
+.glass-panel {
+  border: 1px solid rgb(255 244 214 / 16%);
+  background: rgb(57 19 47 / 72%);
+  box-shadow: 0 24px 80px rgb(20 5 18 / 28%);
+  backdrop-filter: blur(14px);
+}
+
+.light-shadow {
+  box-shadow: 0 18px 50px rgb(31 41 55 / 9%);
+}
+
+.soft-grid {
+  background-image: linear-gradient(rgb(24 32 38 / 3%) 1px, transparent 1px), linear-gradient(90deg, rgb(24 32 38 / 3%) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
